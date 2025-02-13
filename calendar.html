@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>calendar</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="calendar.css" />
-    </head>
-<body>   
+  <head>
+    <title>calendar</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="calendar.css" />
+  </head>
+  <body>
     <main>
-        <div>
-            Year: <select id="year" onchange="updateCalendar()"></select>
-            Month: <select id="month" onchange="updateCalendar()"></select>
-        </div>
-    
-        <table>
-            <thead>
-                <tr>
-                    <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th>
-                    <th>Fri</th><th>Sat</th><th>Sun</th>
-                </tr>
-            </thead>
-            <tbody id="calendar"></tbody>
-        </table>
-    
-        <script src="calendar.js"></script>
-        <script>
-            initialiseCalendar();
-            updateCalendar();
+      <div>
+        Year:
+        <select id="year" onchange="updateCalendar()"></select>
+        Month:
+        <select id="month" onchange="updateCalendar()"></select>
+      </div>
 
-        </script>
+      <table>
+        <thead>
+          <tr>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>
+          </tr>
+        </thead>
+        <tbody id="calendar"></tbody>
+      </table>
+
+      <div id="selected-date">no date yet</div>
+
+      <script src="calendar.js"></script>
+      <script>
+        initialiseCalendar();
+        updateCalendar();
+      </script>
     </main>
-</body>
-    
+  </body>
+</html>
